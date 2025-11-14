@@ -1,6 +1,10 @@
 const prompt = require("prompt-sync")();
 
-celsius = Number(prompt("Ingrese la temperatura en grados Celsius: "))
+celsius = Number(prompt("Ingrese la temperatura en grados Celsius: "));
+
+while (isNaN(celsius)){
+    celsius = Number(prompt("Ingrese un valor numérico: "));
+}
 
 function kelvin(celsius){
     let kelvin = celsius+273.15;
